@@ -20,8 +20,15 @@ let ignore = ['https://www.linkedin.com/shareArticle?mini=true&url=https://auth.
     'https://auth.geeksforgeeks.org/user/shindesahil61/practice#Medium',
     'https://auth.geeksforgeeks.org/user/shindesahil61/practice#Hard']
 
+
+
+// enter player 1 who has solved more problems
 let player1 = 'shindesahil61';
+
+// enter player 2 as you
 let player2 = 'kalukheshridhar24';
+
+// player 1 questions
 (async () => {
     const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
@@ -33,6 +40,8 @@ let player2 = 'kalukheshridhar24';
     await browser.close();
 
 })();
+
+// player two questions
 (async () => {
     const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
@@ -41,10 +50,12 @@ let player2 = 'kalukheshridhar24';
 
     player2 = await page.$$eval('a', as => as.map(a => a.href));
     await browser.close();
-
 })();
-var delayInMilliseconds = 12000; // 20sec
 
+
+// now filtering uncommon questions that player 1 has solved but not player 2
+// if net is slow increase delay below
+var delayInMilliseconds = 20000; // 20sec
 setTimeout(function () {
     let difference = player1.filter(x => player2.indexOf(x) === -1);
     difference = difference.filter(x => ignore.indexOf(x) == -1);
