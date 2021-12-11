@@ -1,29 +1,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs')
-let ignore = ['https://www.linkedin.com/shareArticle?mini=true&url=https://auth.geeksforgeeks.org/user/shindesahil61/practice',
-    'https://plus.google.com/share?url=https://auth.geeksforgeeks.org/user/shindesahil61/practice',
-    'https://twitter.com/share?url=https://auth.geeksforgeeks.org/user/shindesahil61/practice',
-    'https://www.facebook.com/sharer.php?u=https://auth.geeksforgeeks.org/user/shindesahil61/practice',
-    'https://auth.geeksforgeeks.org/?to=https://auth.geeksforgeeks.org/user/shindesahil61/practice',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/profile',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice/',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/articles',
-    'https://auth.geeksforgeeks.org/college/wce-sangli/',
-    'https://practice.geeksforgeeks.org/courses/fork-cpp',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice#problem-solved-div',
-    'https://practice.geeksforgeeks.org/questions/shindesahil61/',
-    'https://practice.geeksforgeeks.org/answers/shindesahil61/',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice#School',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice#Basic',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice#Easy',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice#Medium',
-    'https://auth.geeksforgeeks.org/user/shindesahil61/practice#Hard']
-
-
 
 // enter player 1 who has solved more problems
-let player1 = 'shindesahil61';
+let player1 = 'rajnandinikadam16';
 
 // enter player 2 as you
 let player2 = 'kalukheshridhar24';
@@ -64,5 +43,27 @@ setTimeout(function () {
         fs.writeFileSync('chalu kar bhosdike.json', dataJSON)
     }
     saveNotes(difference)
+    console.log("now format json file");
 }, delayInMilliseconds);
+
+
+let ignore = [`https://www.linkedin.com/shareArticle?mini=true&url=https://auth.geeksforgeeks.org/user/${player1}/practice`,
+    `https://plus.google.com/share?url=https://auth.geeksforgeeks.org/user/${player1}/practice`,
+    `https://twitter.com/share?url=https://auth.geeksforgeeks.org/user/${player1}/practice`,
+    `https://www.facebook.com/sharer.php?u=https://auth.geeksforgeeks.org/user/${player1}/practice`,
+    `https://auth.geeksforgeeks.org/?to=https://auth.geeksforgeeks.org/user/${player1}/practice`,
+    `https://auth.geeksforgeeks.org/user/${player1}/`,
+    `https://auth.geeksforgeeks.org/user/${player1}/profile`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice/`,
+    `https://auth.geeksforgeeks.org/user/${player1}/articles`,
+    `https://auth.geeksforgeeks.org/college/wce-sangli/`,
+    `https://practice.geeksforgeeks.org/courses/fork-cpp`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice#problem-solved-div`,
+    `https://practice.geeksforgeeks.org/questions/${player1}/`,
+    `https://practice.geeksforgeeks.org/answers/${player1}/`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice#School`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice#Basic`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice#Easy`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice#Medium`,
+    `https://auth.geeksforgeeks.org/user/${player1}/practice#Hard`]
 
