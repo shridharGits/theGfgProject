@@ -40,7 +40,7 @@ setTimeout(function () {
     difference = difference.filter(x => ignore.indexOf(x) == -1);
     const saveNotes = function(difference){
         const dataJSON = JSON.stringify(difference);
-        fs.writeFileSync('chalu kar bhosdike.json', dataJSON).fo
+        fs.writeFileSync('chalu kar bhosdike.json', dataJSON)
     }
     saveNotes(difference)
 }, delayInMilliseconds);
