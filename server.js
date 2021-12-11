@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs')
 
 // enter player 1 who has solved more problems
-let player1 = 'rajnandinikadam16';
+let player1 = 'shindesahil61';
 
 // enter player 2 as you
 let player2 = 'kalukheshridhar24';
@@ -40,10 +40,9 @@ setTimeout(function () {
     difference = difference.filter(x => ignore.indexOf(x) == -1);
     const saveNotes = function(difference){
         const dataJSON = JSON.stringify(difference);
-        fs.writeFileSync('chalu kar bhosdike.json', dataJSON)
+        fs.writeFileSync('chalu kar bhosdike.json', dataJSON).fo
     }
     saveNotes(difference)
-    console.log("now format json file");
 }, delayInMilliseconds);
 
 
